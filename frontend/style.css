@@ -1,0 +1,466 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background: #f4f6fb;
+
+    height: 100vh;
+
+}
+
+
+/* MAIN APPLICATION */
+
+.app-container {
+
+    display: flex;
+
+    height: 100vh;
+
+}
+
+
+/* SIDEBAR */
+
+.sidebar {
+
+    width: 260px;
+
+    background: #1e1e2f;
+
+    color: white;
+
+    padding: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.logo h2 {
+
+    font-size: 20px;
+
+}
+
+
+.logo p {
+
+    font-size: 12px;
+
+    color: #bdbdbd;
+
+    margin-top: 5px;
+
+}
+
+
+/* BUTTONS */
+
+.new-chat-btn {
+
+    margin-top: 30px;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    background: #ffffff;
+
+    color: #1e1e2f;
+
+}
+
+
+.categories {
+
+    margin-top: 30px;
+
+}
+
+
+.categories h3 {
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+
+    color: #bdbdbd;
+
+}
+
+
+.categories button {
+
+    width: 100%;
+
+    text-align: left;
+
+    padding: 12px;
+
+    margin-bottom: 8px;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+}
+
+
+.categories button:hover {
+
+    background: #33334a;
+
+}
+
+
+.clear-btn {
+
+    margin-top: auto;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    background: #33334a;
+
+    color: white;
+
+}
+
+
+/* MAIN CHAT */
+
+.main-chat {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+/* HEADER */
+
+.top-header {
+
+    height: 80px;
+
+    background: white;
+
+    padding: 15px 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-bottom: 1px solid #ddd;
+
+}
+
+
+.top-header h2 {
+
+    font-size: 20px;
+
+}
+
+
+.top-header p {
+
+    font-size: 13px;
+
+    color: gray;
+
+    margin-top: 5px;
+
+}
+
+
+.status {
+
+    font-size: 14px;
+
+    color: green;
+
+}
+
+
+.status span {
+
+    display: inline-block;
+
+    width: 10px;
+
+    height: 10px;
+
+    background: green;
+
+    border-radius: 50%;
+
+}
+
+
+/* CHAT BOX */
+
+.chat-box {
+
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 30px;
+
+}
+
+
+/* MESSAGE */
+
+.message {
+
+    display: flex;
+
+    margin-bottom: 25px;
+
+    max-width: 850px;
+
+}
+
+
+.user-message {
+
+    margin-left: auto;
+
+    justify-content: flex-end;
+
+}
+
+
+.avatar {
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #1e1e2f;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-right: 12px;
+
+    font-size: 20px;
+
+}
+
+
+.message-content {
+
+    max-width: 700px;
+
+}
+
+
+.message-name {
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    margin-bottom: 6px;
+
+}
+
+
+.message-text {
+
+    background: white;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    line-height: 1.6;
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+
+}
+
+
+.user-message .message-text {
+
+    background: #1e1e2f;
+
+    color: white;
+
+}
+
+
+/* SUGGESTIONS */
+
+.suggestions {
+
+    padding: 10px 30px;
+
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.suggestions button {
+
+    border: 1px solid #ddd;
+
+    background: white;
+
+    padding: 8px 12px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+}
+
+
+.suggestions button:hover {
+
+    background: #eee;
+
+}
+
+
+/* INPUT */
+
+.input-container {
+
+    display: flex;
+
+    padding: 20px 30px;
+
+    background: white;
+
+    border-top: 1px solid #ddd;
+
+}
+
+
+#user-input {
+
+    flex: 1;
+
+    padding: 15px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+
+}
+
+
+#send-btn {
+
+    margin-left: 10px;
+
+    padding: 0 25px;
+
+    border: none;
+
+    background: #1e1e2f;
+
+    color: white;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+}
+
+
+#send-btn:hover {
+
+    background: #33334a;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .sidebar {
+
+        display: none;
+
+    }
+
+
+    .chat-box {
+
+        padding: 15px;
+
+    }
+
+
+    .top-header {
+
+        padding: 15px;
+
+    }
+
+
+    .suggestions {
+
+        padding: 10px;
+
+    }
+
+
+    .input-container {
+
+        padding: 15px;
+
+    }
+
+}

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>PlacementPrep AI</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<div class="app-container">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h2>🤖 PlacementPrep AI</h2>
+
+            <p>Your AI Placement Assistant</p>
+
+        </div>
+
+
+        <button class="new-chat-btn"
+                onclick="newChat()">
+
+            + New Chat
+
+        </button>
+
+
+        <div class="categories">
+
+            <h3>Categories</h3>
+
+
+            <button onclick="selectCategory('Python')">
+                🐍 Python
+            </button>
+
+
+            <button onclick="selectCategory('Java')">
+                ☕ Java
+            </button>
+
+
+            <button onclick="selectCategory('SQL and DBMS')">
+                🗄️ SQL & DBMS
+            </button>
+
+
+            <button onclick="selectCategory('Technical Interview')">
+                💻 Technical Interview
+            </button>
+
+
+            <button onclick="selectCategory('HR Interview')">
+                💼 HR Interview
+            </button>
+
+
+            <button onclick="selectCategory('Aptitude')">
+                🧠 Aptitude
+            </button>
+
+
+            <button onclick="selectCategory('Resume Preparation')">
+                📄 Resume Preparation
+            </button>
+
+        </div>
+
+
+        <button class="clear-btn"
+                onclick="clearChat()">
+
+            🗑 Clear Chat
+
+        </button>
+
+    </aside>
+
+
+    <!-- MAIN CHAT AREA -->
+
+    <main class="main-chat">
+
+
+        <header class="top-header">
+
+            <div>
+
+                <h2 id="chat-title">
+
+                    Placement Preparation Assistant
+
+                </h2>
+
+
+                <p>
+
+                    Powered by DeepSeek + Ollama
+
+                </p>
+
+            </div>
+
+
+            <div class="status">
+
+                <span></span>
+
+                AI Online
+
+            </div>
+
+        </header>
+
+
+
+        <!-- CHAT BOX -->
+
+        <div id="chat-box"
+             class="chat-box">
+
+
+            <div class="message bot-message">
+
+                <div class="avatar">
+
+                    🤖
+
+                </div>
+
+
+                <div class="message-content">
+
+                    <div class="message-name">
+
+                        PlacementPrep AI
+
+                    </div>
+
+
+                    <div class="message-text">
+
+                        Hello! 👋
+
+                        <br><br>
+
+                        I am your Placement Preparation AI Assistant.
+
+                        <br><br>
+
+                        I can help you with:
+
+                        <ul>
+
+                            <li>Python</li>
+
+                            <li>Java</li>
+
+                            <li>SQL and DBMS</li>
+
+                            <li>Technical Interviews</li>
+
+                            <li>HR Interviews</li>
+
+                            <li>Aptitude</li>
+
+                            <li>Resume Preparation</li>
+
+                        </ul>
+
+                        Ask me anything related to placement preparation!
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- SUGGESTED QUESTIONS -->
+
+        <div class="suggestions">
+
+            <button onclick="askSuggestion('Ask me a Python interview question')">
+
+                Python Interview Question
+
+            </button>
+
+
+            <button onclick="askSuggestion('Explain normalization in DBMS')">
+
+                DBMS Normalization
+
+            </button>
+
+
+            <button onclick="askSuggestion('Ask me a technical interview question')">
+
+                Technical Interview
+
+            </button>
+
+
+            <button onclick="askSuggestion('How should I answer tell me about yourself in an interview?')">
+
+                HR Interview
+
+            </button>
+
+        </div>
+
+
+
+        <!-- INPUT -->
+
+        <div class="input-container">
+
+            <input
+
+                type="text"
+
+                id="user-input"
+
+                placeholder="Ask a placement-related question..."
+
+                autocomplete="off"
+
+            >
+
+
+            <button
+
+                id="send-btn"
+
+                onclick="sendMessage()"
+
+            >
+
+                Send
+
+            </button>
+
+        </div>
+
+
+    </main>
+
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
